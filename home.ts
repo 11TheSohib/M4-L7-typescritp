@@ -61,3 +61,47 @@
         return isActiveStudent;
     }
 }
+
+{
+    type Narx = string | number;
+    function fnStrOrNum(narx: Narx) {
+        return typeof narx == 'string' ? Number(narx) : narx * 2;
+    }
+}
+
+{
+    type boolOrStr = boolean | string;
+    function fnBoolOrStr(inputMsg: boolOrStr): string | number {
+        return typeof inputMsg == 'boolean'
+            ? inputMsg == true
+                ? 'true'
+                : 'false'
+            : inputMsg.length;
+    }
+}
+
+{
+    function checkPuberty(age: number): boolean {
+        return age > 17 ? true : false
+    }
+}
+
+{
+    type Name = string | null | undefined
+    function isName (name: Name){
+        return name ? 'Mehmon' : name
+    }
+}
+
+{
+    function welcomeNews () : void {
+        console.log('Yuo are welcome!');
+    }
+}
+
+{
+    function neverFn () : never {
+        throw new Error('Xatolik yuz berdi')
+    }
+}
+
